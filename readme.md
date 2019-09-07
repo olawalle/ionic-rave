@@ -1,6 +1,9 @@
 # Ionic 4 Rave
 
- This Ionic 4 Module let's you add [Rave](https://www.flutterwave.com) Pay Button into your Cordova/Phonegap apps builds.
+ This Ionic 4 Module let's you add [Rave](https://github.com/jake-parker/ionic-rave.git) Pay Button into your Cordova/Phonegap apps builds. <br/>
+
+ This is a fork of the Ionic 3 Rave package by [Jake Parker] (https://www.flutterwave.com)
+
 
 ## Installation
 <br/>
@@ -26,7 +29,7 @@ $ npm install --save @ionic-native/in-app-browser
 <br/>
 
 ```
-import { Rave, RavePayment, Misc } from 'rave-ionic3';
+import { Rave, RavePayment, Misc } from 'rave-ionic4';
 import { InAppBrowser, InAppBrowserEvent, InAppBrowserObject } from '@ionic-native/
 
 constructor(

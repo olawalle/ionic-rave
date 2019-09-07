@@ -2,8 +2,9 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Rave } from './providers/rave-provider';
 import { RavePayment } from './providers/rave-payment-provider';
 import { Misc } from './providers/misc-provider';
+import { RouterModule } from '@angular/router';
 
-import { IonicModule } from 'ionic-angular';
+import { IonicModule } from '@ionic/angular';
 import { HttpClientModule } from '@angular/common/http';
  
 @NgModule({

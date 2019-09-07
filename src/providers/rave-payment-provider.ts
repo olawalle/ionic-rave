@@ -4,23 +4,6 @@ import { Misc } from './misc-provider';
 @Injectable()
 
 export class RavePayment {
-    // amount = "";
-    // currency = "";
-    // customer_email = "";
-    // txref = ""
-    // redirect_url = ""
-    // meta = ""
-    // custom_description = ""
-    // customer_phone = ""
-    // PBFPubkey = ""
-    // integrity_hash = ""
-    // payment_options = ""
-    // payment_plan = ""
-    // subaccounts = []
-    // country = ""
-    // customer_firstname = ""
-    // customer_lastname = ""
-    // custom_title = "";
     schema: object = {
         txref: {
           required: "true",
