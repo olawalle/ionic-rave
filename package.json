@@ -40,12 +40,11 @@
     "@angular/platform-browser-dynamic": "8.1.1",
     "@ionic/angular": "^4.7.0",
     "cordova-plugin-inappbrowser": "^3.0.0",
-    "rxjs": "6.5.2",    
+    "rxjs": "6.5.2",
     "@angular/compiler": "8.1.1",
     "@angular/compiler-cli": "8.1.1",
     "@types/node": "12.0.8",
     "typescript": "~3.4.5",
     "zone.js": "~0.9.1"
-
   }
 }
