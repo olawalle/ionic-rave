@@ -1,8 +1,8 @@
 # Ionic 4 Rave
 
- This Ionic 4 Module let's you add [Rave](https://github.com/jake-parker/ionic-rave.git) Pay Button into your Cordova/Phonegap apps builds. <br/>
+ This Ionic 4 Module let's you add [Rave](https://www.flutterwave.com) Pay Button into your Cordova/Phonegap apps builds. <br/>
 
- This is a fork of the Ionic 3 Rave package by [Jake Parker] (https://www.flutterwave.com)
+ This is a fork of the Ionic 3 Rave package by [Jake Parker] ((https://github.com/jake-parker/ionic-rave.git)
 
 
 ## Installation
