@@ -1,6 +1,6 @@
 {
   "name": "rave-ionic4",
-  "version": "0.0.3",
+  "version": "1.0.4",
   "description": "An ionic module to help you integrate rave inline payment modal",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cavewebs/ionic-rave.git"
+    "url": "git+https://github.com/cavewebs/ionic-rave.git"
   },
   "keywords": [
     "rave",
