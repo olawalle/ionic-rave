@@ -1,6 +1,6 @@
 {
-  "name": "rave-ionic3",
-  "version": "1.0.3",
+  "name": "rave-ionic4",
+  "version": "0.0.3",
   "description": "An ionic module to help you integrate rave inline payment modal",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jake-parkers/ionic-rave.git"
+    "url": "https://github.com/cavewebs/ionic-rave.git"
   },
   "keywords": [
     "rave",
@@ -25,25 +25,27 @@
     "africa",
     "ionic plugin",
     "rave-ionic-sdk",
-    "rave-ionic3-sdk",
-    "accept payment"
+    "rave-ionic4-sdk",
+    "accept payment",
+    "Nigeria Payment sdk"
   ],
-  "author": "Joshua Kwaku Boateng",
+  "author": "Timchosen Uzua",
   "license": "MIT",
-  "homepage": "https://github.com/Jake-parkers/ionic-rave/blob/master/readme.md",
+  "homepage": "https://github.com/cavewebs/ionic-rave/blob/master/readme.md",
   "devDependencies": {
-    "@angular/common": "5.0.3",
-    "@angular/compiler": "5.0.3",
-    "@angular/compiler-cli": "5.0.3",
-    "@angular/core": "5.0.3",
-    "@angular/forms": "^5.2.7",
-    "@angular/platform-browser": "5.0.3",
-    "@angular/platform-browser-dynamic": "5.0.3",
-    "@types/node": "^9.4.6",
+    "@angular/common": "8.1.1",
+    "@angular/core": "8.1.1",
+    "@angular/forms": "8.1.1",
+    "@angular/platform-browser": "8.1.1",
+    "@angular/platform-browser-dynamic": "8.1.1",
+    "@ionic/angular": "^4.7.0",
     "cordova-plugin-inappbrowser": "^3.0.0",
-    "ionic-angular": "3.9.2",
-    "rxjs": "5.5.2",
-    "typescript": "2.4.2",
-    "zone.js": "0.8.18"
+    "rxjs": "6.5.2",    
+    "@angular/compiler": "8.1.1",
+    "@angular/compiler-cli": "8.1.1",
+    "@types/node": "12.0.8",
+    "typescript": "~3.4.5",
+    "zone.js": "~0.9.1"
+
   }
 }

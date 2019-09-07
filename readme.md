@@ -1,11 +1,11 @@
-# Ionic 3 Rave
+# Ionic 4 Rave
 
- This Ionic 3 Module let's you add [Rave](https://www.flutterwave.com) Pay Button into your Cordova/Phonegap apps builds.
+ This Ionic 4 Module let's you add [Rave](https://www.flutterwave.com) Pay Button into your Cordova/Phonegap apps builds.
 
 ## Installation
 <br/>
 
-The Rave Ionic 3 Module adds support for spinning up the Rave modal on IOS and Android. It uses the Rave Standard endpoint and has done all the hard work for you. All you need to is add the necessary file and call the appropriate functions.
+The Rave Ionic 4 Module adds support for spinning up the Rave modal on IOS and Android. It uses the Rave Standard endpoint and has done all the hard work for you. All you need to is add the necessary file and call the appropriate functions.
 
 1. Follow the official [Rave](https://www.flutterwave.com) documentation on how to create an account if you don't have one yet.
 2. Create a dummy project. For example ```ionic start myapp blank```
@@ -13,7 +13,7 @@ The Rave Ionic 3 Module adds support for spinning up the Rave modal on IOS and A
 
 ```
 $ cd myapp
-$ npm install --save rave-ionic3
+$ npm install --save rave-ionic4
 $ ionic cordova plugin add cordova-plugin-inappbrowser
 $ npm install --save @ionic-native/in-app-browser
 ```
@@ -138,10 +138,10 @@ The currency of the payment
 # License
 <br/>
 
-Released under [MIT License](https://github.com/Jake-parkers/ionic-rave/blob/master/License)
+Released under [MIT License](https://github.com/cavewebs/ionic-rave/blob/master/License)
 
 
 # Contributions
 <br/>
 
-Pull requests and new issues are welcome. See [CONTRIBUTING.md](https://github.com/Jake-parkers/ionic-rave/blob/master/CONTRIBUTING.md) for details.
+Pull requests and new issues are welcome. See [CONTRIBUTING.md](https://github.com/cavewebs/ionic-rave/blob/master/CONTRIBUTING.md) for details.
