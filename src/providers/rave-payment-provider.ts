@@ -164,3 +164,4 @@ export class RavePayment {
         else return {valid: false, error: error};
     }    
 }
+

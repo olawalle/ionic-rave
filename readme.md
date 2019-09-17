@@ -21,6 +21,31 @@ $ ionic cordova plugin add cordova-plugin-inappbrowser
 $ npm install --save @ionic-native/in-app-browser
 ```
 4. [Add the module to your AppModule](https://ionicframework.com/docs/native/#Add_Plugins_to_Your_App_Module)
+  i.e Go to app.module.ts
+```
+import { HttpClientModule } from '@angular/common/http';
+import { Rave, RavePayment, Misc } from 'rave-ionic4';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'; 
+```
+<br />
+ Add `HttpClientModule` to imports <br />
+
+add  `InAppBrowser, Rave, RavePayment, Misc` to providers <br />
+
+On the page you want to call the inline payment,  inside the page.ts file
+
+```
+import { InAppBrowser, InAppBrowserEvent, InAppBrowserObject } from '@ionic-native/in-app-browser/ngx';
+import { Rave, RavePayment, Misc } from 'rave-ionic4'; 
+```
+
+add to the constructor the following <br />
+```
+  private rave: Rave, 
+  private ravePayment: RavePayment, 
+  private misc: Misc,
+  private iab: InAppBrowser
+  ```
 5. **Ensure** that you have set up a redirect url to handle the response sent from rave. See [here](https://medium.com/@jake_parkers/3d-secure-guidelines-9e17f9a6cf32) for guide lines on how to set up your redirect url
 5. See Usage
 
@@ -42,11 +67,14 @@ constructor(
 ...
 
 
-this.rave.init(PRODUCTION_FLAG, "YOUR_PUBLIC_KEY")
+// this function uses a form input with ngmodel to set the amount  (see the working tutorial)
+// you can set the form input to hidden or arbitray om the amount if you do not need for the user to change the amount.
+ravePay() {
+      this.rave.init(true, "PUBLIC_KEY") //true = production, false = test
       .then(_ => {
         var paymentObject = this.ravePayment.create({
           customer_email: "user@example.com",
-          amount: 2000,
+          amount: this.amount,
           customer_phone: "234099940409",
           currency: "NGN",
           txref: "rave-123456",
@@ -61,28 +89,28 @@ this.rave.init(PRODUCTION_FLAG, "YOUR_PUBLIC_KEY")
             const browser: InAppBrowserObject = this.rave.render(secure_link, this.iab);
             browser.on("loadstop")
                 .subscribe((event: InAppBrowserEvent) => {
-                  if(event.url.indexOf('https://your-redirect-url') != -1) {
-                    if(this.rave.paymentStatus(url) == 'failed') {
-                      this.alertCtrl.create({
-                        title: "Message",
-                        message: "Oops! Transaction failed"
-                      }).present();
+                  if(event.url.indexOf('https://your-callback-url') != -1) {
+                    if(this.rave.paymentStatus('url') == 'failed') {
+                      console.log("failed Message");
                     }else {
-                      this.alertCtrl.create({
-                        title: "Message",
-                        message: "Transaction successful"
-                      }).present();
+                      console.log("Transaction Succesful");
+
                     }
                     browser.close()
                   }
                 })
           }).catch(error => {
             // Error or invalid paymentObject passed in
+            console.log ("error", error);
           })
       })
 
-```
+    }
 
+
+```
+ <br/>
+ [see this sample implementation](https://github.com/cavewebs/myraveapp) <br />
 ## Instance Members
 
 ### Rave
@@ -106,7 +134,7 @@ Start the Rave UI to collect payment from user.
 Use the ```InAppBrowserObject``` returned to close the modal once the transaction completes by binding to the ```loadend``` event and checking for your redirect url as was shown above.
 
 **```paymentStatus(url)```**
-Get's the status of the transaction and returns it as a string. The status could either be ```success``` or ````failed```.
+Get's the status of the transaction and returns it as a string. The status could either be ```success``` or ```failed```.
 
 Parameter(s)
 
