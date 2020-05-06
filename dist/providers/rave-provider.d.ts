@@ -1,3 +1,4 @@
+/** @format */
 import { Misc } from './misc-provider';
 import { RavePayment } from './rave-payment-provider';
 import { HttpClient } from '@angular/common/http';
@@ -22,6 +23,6 @@ export declare class Rave {
      * Spins up the modal
      * @param paymentLink
      */
-    render(paymentLink: any, iab: any): any;
+    render(paymentLink: any, iab: any, browser_options: any): any;
     paymentStatus(url: any): any;
 }

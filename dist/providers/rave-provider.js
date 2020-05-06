@@ -1,3 +1,4 @@
+/** @format */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -27,7 +28,7 @@ var Rave = /** @class */ (function () {
         if (production === void 0) { production = false; }
         return new Promise(function (resolve, reject) {
             if (public_key == undefined)
-                reject("Please pass in a valid public key");
+                reject('Please pass in a valid public key');
             if (production)
                 _this.uri = _this.misc.live;
             else
@@ -42,16 +43,15 @@ var Rave = /** @class */ (function () {
      */
     Rave.prototype.preRender = function (paymentObject) {
         var _this = this;
-        paymentObject["PBFPubKey"] = this.misc.PBFPubKey;
+        paymentObject['PBFPubKey'] = this.misc.PBFPubKey;
         var paymentObj = this.ravePayment.create(paymentObject);
         return new Promise(function (resolve, reject) {
-            if (paymentObj["validated"]) {
-                return _this.http.post(_this.uri, paymentObj, { headers: { 'content-type': 'application/json' } })
-                    .subscribe(function (response) {
-                    if (response["status"] == "error")
-                        reject(response["message"]);
+            if (paymentObj['validated']) {
+                return _this.http.post(_this.uri, paymentObj, { headers: { 'content-type': 'application/json' } }).subscribe(function (response) {
+                    if (response['status'] == 'error')
+                        reject(response['message']);
                     else
-                        resolve(response["data"]["link"]);
+                        resolve(response['data']['link']);
                 });
             }
             else
@@ -62,15 +62,15 @@ var Rave = /** @class */ (function () {
      * Spins up the modal
      * @param paymentLink
      */
-    Rave.prototype.render = function (paymentLink, iab) {
+    Rave.prototype.render = function (paymentLink, iab, browser_options) {
         //@ts-ignore
-        return iab.create(paymentLink.toString(), '_blank');
+        return iab.create(paymentLink.toString(), '_blank', browser_options);
     };
     Rave.prototype.paymentStatus = function (url) {
         var response = decodeURIComponent(url);
-        response = response.slice(response.indexOf("=") + 1, response.length);
+        response = response.slice(response.indexOf('=') + 1, response.length);
         response = JSON.parse(response);
-        return response["status"];
+        return response['status'];
     };
     Rave = __decorate([
         Injectable(),
